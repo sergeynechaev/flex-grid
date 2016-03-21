@@ -1,0 +1,37 @@
+{
+  "name": "flex-grid",
+  "version": "0.1.0",
+  "description": "Flex grid web layout",
+  "main": "index.html",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/sergeynechaev/flex-grid.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sergey Nechaev",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.7.13",
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-clean-css": "^2.0.3",
+    "gulp-concat": "^2.6.0",
+    "gulp-filter": "^2.0.2",
+    "gulp-flatten": "^0.1.0",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-jade": "^1.0.1",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-newer": "^0.5.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^2.0.3",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-watch": "^4.3.1",
+    "main-bower-files": "^2.9.0"
+  },
+  "dependencies": {}
+}

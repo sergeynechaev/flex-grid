@@ -1,0 +1,232 @@
+/* channel message's history */
+
+
+$color-message-my: #e9f2fb;
+$color-message: #f8f8f8;
+$font-size-h4: 1.142rem !default;
+
+.channel-container {
+	position: fixed;
+    top: 70px;
+    left: 305px;
+    bottom: 20px;
+    z-index: 1000;
+    width: 500px;
+    background: #fff;
+    padding: 20px 0 20px 20px;
+    @include box-white-shadow();
+}
+
+.channel {
+	height: 100%;
+	@include flex-box();
+	@include flex-direction(column);
+	@include flex-wrap(nowrap);
+	@include justify-content(space-between);
+}
+
+.channel__header {
+	@include flex-box();
+	@include flex-direction(row);
+	@include flex-wrap(nowrap);
+	@include justify-content(space-between);
+	@include align-items(flex-start);
+	padding: 0 20px 0 0;
+	min-height: 50px;
+
+	&-title {
+		font-size: $font-size-h2;
+		color: $gray-dark;
+	}
+	&-actions {
+		@include flex-box();
+		@include flex-direction(row);
+		@include flex-wrap(nowrap);
+	}
+}
+
+.channel__history {
+	width: 100%;
+	padding: 0 20px 0 0;
+	overflow-y: auto;
+/*	@include flex-box();
+	@include flex-direction(column);
+	@include flex-wrap(nowrap);
+	@include justify-content(space-between);*/
+
+	&-alert {
+		position: absolute;
+		top: 60px;
+		left: 0;
+		width: 75%;
+		padding: 5px 20px;
+		background-color: $brand-success;
+		color: #fff;
+		z-index: 5000;
+		border-radius: 0 5px 5px 0;
+
+		&-action {
+			font-weight: 400;
+			cursor: pointer;
+			border-bottom: 1px dotted;
+		}
+	}
+}
+
+/*.channel__content {
+	overflow-y: auto;
+	@include flex-box();
+	@include flex-direction(column);
+	@include flex-wrap(nowrap);
+	@include justify-content(space-between);
+}*/
+
+.channel__sendarea {
+	min-height: 50px;
+	margin: 15px 20px 0 0;
+	/*@include border-radius(6px);*/
+	border: 1px solid $gray-light;
+	@include flex-box();
+	@include flex-direction(row);
+	@include flex-wrap(nowrap);
+	@include justify-content(space-between);
+	@include align-items(stretch);
+
+	&-actions {
+		width: 40px;
+		text-align: center;
+		background-color: $color-message;
+		padding: 15px 0 0 0;
+	}
+	&-textarea {
+		padding: 5px;
+		width: 100%;
+
+		textarea{
+			border: none;
+			width: 100%;
+			min-height: 40px;
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+	&-emoji {
+		width: 50px;
+		text-align: center;
+		background-color: $color-message;
+		padding: 15px 0 0 0;
+	}
+}
+
+
+
+
+
+
+/* Message */
+
+.message {
+	margin: 10px 0 20px 0;
+	@include flex-box();
+	@include flex-direction(column);
+	@include flex-wrap(nowrap);
+	@include align-items(flex-start);
+
+	&__info {
+		@include flex-box();
+		@include flex-direction(row);
+		@include flex-wrap(nowrap);
+		@include justify-content(space-between);
+		@include align-items(center);
+		width: 400px;
+		max-width: 400px;
+	}
+	&__user {
+		font-size: $font-size-h4;
+		color: $gray-dark;
+		margin: 5px 0 10px 0;
+		text-align: left;
+		@include flex-grow(5);
+	}
+	&__actions {
+		
+	}
+	&__time {
+		padding: 0 0 0 10px;
+	}
+
+	&__body {
+		@include flex-box();
+		@include flex-direction(row);
+		@include flex-wrap(nowrap);
+		@include align-items(center);
+	}
+	&__body-action {
+		padding-right: 10px;
+	}
+	&__body-text {
+		position: relative;
+		background-color: $color-message;
+		@include border-radius(6px);
+		padding: 10px 20px;
+		word-wrap: break-word;
+		width: 400px;
+		max-width: 400px;
+
+		&:before{
+			content: '';
+			position: absolute;
+			top: -16px; left: 15px;
+			border: 8px solid transparent;
+			border-bottom: 8px solid $color-message;
+		}
+	}
+
+
+	&__date {
+		text-align: center;
+		font-style: italic;
+		font-size: 12px;
+		&:before, &:after{
+			content: '';
+		    border-bottom: 1px solid $brand-success;
+		    display: inline-block;
+		    width: 100px;
+		    position: relative;
+		}
+		&:before, &:after{
+		    top: -4px;
+		    right: 10px;
+		}
+		&:after{
+		    top: -4px;
+		    left: 10px;
+		}
+	}
+
+	/* My message */
+	&[data-state=my] {
+		@include align-items(flex-end);
+		.message {
+			&__user { 
+				@include order(3);
+				text-align: right;
+			}
+			&__actions { @include order(2); }
+			&__time {
+				padding: 0 10px 0 0;
+				@include order(1);
+			}
+			&__body-text {
+				background-color: $color-message-my;
+				text-align: right;
+				&:before{
+					border-bottom-color: $color-message-my;
+					left: auto;
+					right: 15px;
+				}
+			}
+		}
+	}
+}

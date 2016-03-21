@@ -1,0 +1,234 @@
+.page {
+	position: relative;
+    min-height: 100%;
+}
+
+.sidebar {
+	position: fixed;
+    top: 70px;
+    left: 0;
+    bottom: 0;
+    z-index: 998;
+    width: 310px;
+    background: #fff;
+    padding: 20px;
+}
+
+
+/* cc = contact-center */
+.contact-center {
+	height: 100%;
+	@include flex-box();
+	@include flex-direction(column);
+	@include flex-wrap(nowrap);
+	@include justify-content(flex-start);
+	@include align-content(stretch);
+
+	&[data-state=collapse] {
+		// @include flex(1 0 40px);
+		@include align-content(flex-start);
+		// height: initial;
+		// overflow-y: hidden;
+	}
+}
+
+.contact-center__block {
+	border: 1px solid #777;
+	height: 100%; // remove to show visible block proportional
+	overflow-y: hidden;
+	@include flex-grow(5);
+
+	@include flex-box();
+	@include flex-direction(column);
+	@include flex-wrap(nowrap);
+
+	&[data-state=collapse] {
+		@include flex(0 0 40px);
+		height: initial;
+		overflow-y: hidden;
+	}
+
+	&-header {
+		min-height: 30px;
+		@include flex-box();
+		@include flex-direction(row);
+		@include flex-wrap(nowrap);
+		@include justify-content(space-between);
+		@include align-content(stretch);
+	}
+	&-header-title {
+		font-size: 16px;
+		border-bottom: 1px dotted;
+		margin: 4px;
+	}
+
+	&-subheader {
+		min-height: 30px;
+		@include flex-box();
+		@include flex-direction(row);
+		@include flex-wrap(nowrap);
+		// @include justify-content(space-between);
+		// @include align-content(stretch);
+	}
+
+	&-content {
+		overflow-y: auto;
+		@include flex-box();
+		@include flex-direction(column);
+		@include flex-wrap(nowrap);
+	}
+
+}
+
+.contact-center__elem {
+	padding: 10px;
+	@include flex-box();
+	@include flex-direction(row);
+	@include flex-wrap(nowrap);
+	@include justify-content(space-between);
+	@include flex(1 0 auto);
+	border-bottom: 1px solid $gray-light;
+
+	&-left {
+		@include flex-box();
+		@include flex-direction(column);
+	}
+
+	&-right {
+		@include flex-box();
+		@include flex-direction(row);
+		@include flex-wrap(nowrap);
+		@include align-items(center);
+	}
+}
+
+.contact-center__user {
+	&-credits {
+		color: $gray-dark;
+		margin: 0 0 2px 0;
+	}
+	&-company {
+		font-size: 12px;
+		color: $gray;
+	}
+	// &-notInContact{
+ //        @include flex-box;
+ //        @include justify-content(space-between);
+ //        font-size: 0.8em;
+ //        padding-top: 1px;
+ //    }
+ //    &-notInContact-text{
+ //        color: $brand-warning;
+ //    }
+ //    &-notInContact-action{
+ //        color: $green;
+ //        border-bottom: 1px dotted;
+ //        cursor: pointer;
+ //        margin-left: 8px;
+ //    }
+	&-unreaded {
+		color: $brand-success;
+	}
+	&-status {
+		margin: 0 0 0 5px;
+		width: 10px;
+        height: 10px;
+        border-radius: 50%;
+	    &[data-state=offline] {
+	        background-color: $gray-light;
+	    }
+	    &[data-state=online] {
+	        background-color: $brand-success !important;
+	    }
+	}
+	&-action {
+        margin-right: -5px;
+    }
+}
+
+.contact-center__channel{
+	&-title {
+		color: $gray-dark;
+		margin: 0 0 2px 0;
+	}
+	&-users {
+		font-size: 12px;
+		color: $gray;
+	}
+	&-unreaded {
+		color: $brand-success;
+	}
+	&-status {
+		margin: 0 0 0 5px;
+		width: 10px;
+        height: 10px;
+        border-radius: 50%;
+	    &[data-state=invite] {
+	        background-color: $gray-light;
+	    }
+	}
+}
+
+.contact-center__btn {
+	background-color: $brand-success;
+	color: $color-invert;
+	padding: 1px 5px;
+	font-size: 16px;
+	@include border-radius(2px);
+	margin: 4px 5px 0 0;
+	line-height: 1em;
+}
+
+.contact-center__tab {
+    text-align: center;
+    @include flex-box();
+    @include flex-direction(row);
+    @include flex-wrap(nowrap);
+    @include justify-content(space-between);
+    @include align-content(stretch);
+    @include align-items(center);
+    @include flex-grow(50);
+    margin: 0;
+    padding: 0;
+    /*width: 100%;*/
+
+    &-left, &-right {
+        border-top: 1px solid $gray-superlight;
+        border-bottom: 1px solid $gray-superlight;
+        @include flex-grow(1);
+        padding: 5px;
+    }
+    &-left {
+        border-left: 1px solid $gray-superlight;
+        @include border-left-radius(3px);
+    }
+    &-right {
+        border-right: 1px solid $gray-superlight;
+        @include border-right-radius(3px);
+    }
+    &-left[data-state=active], &-right[data-state=active] {
+        background-color: $brand-success;
+        color: $color-invert;
+    }
+}
+
+.contact-center__search {
+	@include flex-grow(1);
+	border: 1px solid $gray-superlight;
+	@include border-radius(3px);
+	@include flex-box();
+	@include flex-direction(row);
+	@include flex-wrap(nowrap);
+	@include align-items(center);
+	@include align-content(stretch);
+	@include justify-content(flex-start);
+	margin: 0 0 0 5px;
+	padding: 0 2px 0 5px;
+
+	& input {
+		width: 90%;
+		margin-left: 5px;
+		border: none;
+	}
+}
+

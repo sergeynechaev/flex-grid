@@ -1,0 +1,120 @@
+// Variables
+// Colors
+
+$gray-dark:                 #526069 !default;
+$gray:						#74848d !default;
+$gray-light:				#e9eaeb !default;
+$gray-superlight: 			#dfe1e0 !default;
+
+$color-invert: 				#ffffff !default;
+
+$brand-success:				#42bf89 !default;
+$brand-danger:              #f96868 !default;
+$brand-warning:             #f2a654 !default;
+$brand-primary:             #62a8ea !default;
+$brand-default:             #e4eaec !default;
+
+$body-bg:                   #f1f4f5 !default;
+$body-color:                $gray !default;
+
+$text-muted:              	$gray !default;
+
+// Links
+
+$link-color:				$brand-primary !default;
+$link-hover-color:     		darken($link-color, 15%) !default;
+$link-hover-decoration:		underline !default;
+
+ // Typography
+
+$font-family-sans-serif:    'Open Sans', sans-serif !default;
+$font-family-base:          $font-family-sans-serif !default;
+
+$font-size-root:            14px !default;
+$font-size-base:            1rem !default;
+
+$font-size-h1:				1.714rem !default;
+$font-size-h2:				1.429rem !default;
+$font-size-h3:				1.286rem !default;
+
+$font-size-small:			0.857rem !default;
+
+$headers-color:				$gray-dark;
+
+$font-weight-base:			400 !default;
+$font-weight-light:			300 !default;
+
+$line-height:               1.357 !default;
+
+
+// Grid
+$grid-col-width: (
+	1: 8.333,		2: 16.667,
+	3: 25,			4: 33.333,
+	5: 41.667,		6: 50,
+	7: 58.333,		8: 66.667,
+	9: 75,			10: 83.333,
+	11: 91.667,		12: 100
+)!default;
+
+
+
+// Components
+//- Header
+$header-height:				70px !default;
+$header-background:			#263238 !default;
+$header-size:				1.143rem;
+
+//- Sidebar
+$sidebar-width:				310px !default;
+$sideber-background:		#fff !default;
+$sidebar-padding:			20px !default;
+
+//- Content
+$content-padding:			20px !default;
+
+
+// Controls
+//- Panel
+$panel-header-padding:		14px 20px 0 !default;
+$panel-body-padding:		10px !default;
+$panel-body-min-height:		250px !default;
+$panel-border-radius:		3px !default;
+$panel-background:			#fff !default;
+
+//- Tabs
+$panel-tabs-border:			1px solid $gray-light !default;
+$panel-tabs-active-color:	$brand-primary !default;
+$panel-tabs-padding:		14px 20px !default;
+
+//- Buttons
+$btn-font-size:				0.929rem;
+$btn-padding:				10px 20px !default;
+$btn-small-padding:			5px 10px;
+$btn-border-radius:			3px;
+
+//- Modal Window
+$modal-background: 			rgba(38, 50, 56, 0.7);
+
+//- Icon
+$icon-fill:					$gray-dark;
+$icon-hover-fill:			darken($icon-fill, 15%);
+
+//- Tooltip
+$tooltip-position: 			relative !default;
+$tooltip-background:		#424242;
+$tooltip-color:				#fff;
+$tooltip-size:				0.857rem;
+
+//- ImageHint
+$imagehint-background:		rgba(38, 50, 56, 0.7);
+
+
+//- Forms
+//-- Input
+$input-font-size:			1rem;
+$input-border-color:		$brand-default;
+$input-border-color-focus: 	$brand-primary		
+
+
+

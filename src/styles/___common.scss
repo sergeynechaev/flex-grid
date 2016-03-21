@@ -1,0 +1,16 @@
+@import "compass/css3";
+
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #555;
+
+html, body {
+	min-height: 100%;
+}
+
+body {
+	background-color: #eee;
+	@include filter-gradient(#dadada, #ffffff, horizontal);
+	@include background-image(linear-gradient(left bottom,  #dadada 20%, #ffffff 70%));
+	font: 100% $font-stack;
+  	color: $primary-color;
+}

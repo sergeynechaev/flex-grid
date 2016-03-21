@@ -1,0 +1,147 @@
+doctype html
+html
+	include partials/index-header.jade
+	body
+		.page
+
+			.sidebar
+				//- contact-center sidebar
+				.contact-center(data-state="collapse")
+
+					.contact-center__block
+						.contact-center__block-header.pointer
+							//- .contact-center__block-header-title.pointer 
+							span Каналы
+							div
+								.contact-center__btn.pointer +
+						.contact-center__block-subheader
+							.contact-center__tab
+								.contact-center__tab-left.pointer(data-state="active") Все 
+								.contact-center__tab-right.pointer Мои 
+							.contact-center__search 
+								div P
+								input(placeholder="Поиск...")
+						.contact-center__block-content
+
+							.contact-center__elem
+								.contact-center__elem-left 
+									.contact-center__user-credits Сергей Нечаев
+									.contact-center__user-company ООО "БумТранс"
+								.contact-center__elem-right 
+									.contact-center__user-unreaded +5
+									.contact-center__user-status(data-state="online")
+
+							.contact-center__elem
+								.contact-center__elem-left 
+									.contact-center__user-credits Елена Осипова
+									.contact-center__user-company ООО "Новые технологии"
+								.contact-center__elem-right 
+									.contact-center__user-unreaded +5
+									.contact-center__user-status(data-state="offline")
+
+							.contact-center__elem
+								.contact-center__elem-left 
+									.contact-center__user-credits тестер
+									.contact-center__user-company ООО "ААА"
+								.contact-center__elem-right 
+									.contact-center__user-unreaded +5
+									.contact-center__user-status(data-state="offline")
+
+							.contact-center__elem
+								div Subcontent 14
+								div SubSubcontent 1
+
+					.contact-center__block(data-state="collapse")
+						.contact-center__block-header 
+							div Header 2
+						.contact-center__block-subheader
+							div Sub Header 2
+						.contact-center__block-content
+							.contact-center__elem
+								div Subcontent 21
+								div SubSubcontent 2
+							.contact-center__elem
+								div Subcontent 22
+								div SubSubcontent 2
+
+					.contact-center__block
+						.contact-center__block-header 
+							div Header 3
+						.contact-center__block-subheader
+							div Sub Header 3
+						.contact-center__block-content
+							.contact-center__elem
+								div Subcontent 31
+								div SubSubcontent 3
+							.contact-center__elem
+								div Subcontent 32
+								div SubSubcontent 3
+							.contact-center__elem
+								div Subcontent 33
+								div SubSubcontent 3
+							.contact-center__elem
+								div Subcontent 34
+								div SubSubcontent 3
+							.contact-center__elem
+								div Subcontent 35
+								div SubSubcontent 3
+
+
+				//- message history
+				.channel-container
+					.channel
+
+						.channel__header
+							.channel__header-title Чат: Сергей Нечаев
+							.channel__header-actions [x] [-]
+
+						.channel__history
+							.channel__history-alert.hidden Есть новые сообщения. 
+								span.channel__history-alert-action Посмотреть
+
+							.message#message--1
+								.message__info 
+									.message__user Сергей Нечаев
+									.message__actions [ред] [del]
+									.message__time 10:56
+								.message__body Содержимое сообщений
+
+							.message#message--2(data-state="my")
+								.message__info 
+									.message__user Вы
+									.message__actions [ред] [del]
+									.message__time 10:56
+								.message__body
+									.message__body-action V
+									.message__body-text А вот еще случай был? А вот еще случай был, тут такое динное длинное предложение в несколько длинных длинных строк.
+
+							.message#channel-message__-3
+								.message__info 
+									.message__user Илья Суходольский
+									.message__actions [ред] [del]
+									.message__time 10:56
+								.message__body Ох ты ж нифига себе!
+
+							.message#channel-message__-4(data-state="my")
+								.message__info 
+									.message__user Вы
+									.message__actions [ред] [del]
+									.message__time 10:56
+								.message__body Авотещелучайбыл?Авотещеслучайбыл,туттакоединноедлинноепредложениевнесколькодлинныхдлинныхстрок.
+
+							.message#channel-message__-5(data-state="my")
+								.message__info 
+									.message__user Вы
+									.message__actions [ред] [del]
+									.message__time 10:56
+								.message__body А вот еще случай был? А вот еще случай был, тут такое динное длинное предложение в несколько длинных длинных строк.
+
+							
+
+						.channel__sendarea
+							.channel__sendarea-actions +
+							.channel__sendarea-textarea
+								textarea
+							.channel__sendarea-emoji :)
+	
+	include partials/index-footer.jade

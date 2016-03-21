@@ -1,0 +1,15 @@
+doctype html
+include partials/index-header.jade
+html
+    body
+        div
+            a(href="/") << Back
+        div Flexbox layout test
+        ul.flex-row
+            li.flex-col-4 This is a block #1
+            li.flex-col-4 This is a block #2
+            li.flex-col-4 This is a block #3
+            li.flex-col-4 This is a block #4
+            li.flex-col-4 This is a block #5
+
+        include partials/index-footer.jade

@@ -1,0 +1,55 @@
+// Badge
+
+.badge{
+	display: inline-block;
+    min-width: 10px;
+    padding: 3px 6px;
+    font-size: 12px;
+    color: $gray;
+    line-height: 1;
+    vertical-align: middle;
+    text-align: center;
+    background-color: $gray-light;
+    border-radius: 10px;
+    margin-top: -2px;
+}
+
+.badge-danger{
+	background: $brand-danger;
+	color: #fff;
+}
+
+.badge-warning{
+	background: $brand-warning;
+	color: #fff;
+}
+
+.badge-primary{
+    background: $brand-primary;
+    color: #fff;
+}
+
+.badge-success{
+	background: $brand-success;
+	color: #fff;
+}
+
+// Well
+
+.well{
+	min-height: 20px;
+    padding: 20px;
+    background-color: lighten($brand-default, 5%);
+    border: 1px solid $brand-default;
+    font-size: 13px;
+}
+
+.well-small{
+    padding: 9px;
+    border-radius: 2px;
+}
+
+.well-large{
+	padding: 24px;
+    border-radius: 4px;
+}

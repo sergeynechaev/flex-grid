@@ -1,0 +1,17 @@
+{
+  "name": "flex-grid",
+  "version": "0.1.0",
+  "authors": [
+    "Sergey Nechaev"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "2.*"
+  }
+}

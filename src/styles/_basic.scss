@@ -1,0 +1,53 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,cyrillic-ext);
+
+html {
+	box-sizing: border-box;
+	font-size: $font-size-root;
+} 
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	margin: 0; padding: 0;
+}
+
+html,
+body {
+  	height: 100%;
+}
+
+body {
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+	font-weight: $font-weight-base;
+	line-height: $line-height;
+	background-color: $body-bg;
+	color: $body-color;
+}
+
+h1, .h1, 
+h2, .h2, 
+h3, .h3{ 
+	font-weight: $font-weight-base;
+	color: $headers-color;
+}
+
+h1, .h1 { font-size: $font-size-h1; margin-bottom: 1rem;}
+h2, .h2 { font-size: $font-size-h2; margin-bottom: 1rem;}
+h3, .h3 { font-size: $font-size-h3; margin-bottom: 1rem;}
+
+p {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+a {
+	color: $link-color;
+  	text-decoration: none;
+
+  	&:hover{
+  		color: $link-hover-color;
+  		text-decoration: $link-hover-decoration;
+  	}
+}
